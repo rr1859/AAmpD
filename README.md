@@ -38,6 +38,7 @@ getBackgroundReads(snap_obj = gbm1_atac_s3,
                   sample_prefix="GBM1",
                   output_folder = "AAmpD_bg_reads",
                   path_to_bgreads = '.')
+
 #Non-tumor brain sample (astrocytes, oligogendrocyte progenitor cells)
 getBackgroundReads(snap_obj = non_tumor_atac, 
                    snap_file = "Human_brain_2_only.snap",
