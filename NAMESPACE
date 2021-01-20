@@ -1,9 +1,3 @@
-expo`rtPattern("^[^\\.]")
-import(  GenomicRanges,
-  DNAcopy,
-  psych,
-  R.utils,
-  SnapATAC,
-  biovizBase
-  
-)
+exportPattern("^[^\\.]")
+import(GenomicRanges,DNAcopy,psych,R.utils,SnapATAC,biovizBase)
+
