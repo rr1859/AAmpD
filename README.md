@@ -25,7 +25,7 @@ For scATAC-seq data analyzed using Snaptools/SnapATAC
 In analysis folder, save 1) peak BED files, 2) .snap files ,3) bg_reads_50kbsh script, 4) mappability file, 5) genome file and 6) blacklist regions. Example and hg38 files can be found here - http://renlab.sdsc.edu/rraviram/github_example_data
 ```
 library(BSgenome.Hsapiens.UCSC.hg38)
-gbm1_atac=readRDS("GBM1_IDHMT_section3.rds")
+gbm1_atac_s3=readRDS("GBM1_IDHMT_section3.rds")
 non_tumor_atac=readRDS("Non_tumor_opc_ast.rds"
 
 #GBM1 tumor sample (section 3)
