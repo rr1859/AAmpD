@@ -21,7 +21,7 @@ Clustering of sc/snATAC-seq data can be performed using [SnapATAC](https://githu
 ### Clustering results of GBM1 (5 sections) and large scale CNV analysis
 <img src="./images/GBM1.png" width="600" height="375" />
 
-For scATAC-seq data analyzed using Snaptools/SNAPATAC: In analysis folder, save 1) peak BED files, 2) .snap files ,3) bg_reads_50kbsh script, 4) mappability file, 5) genome file and 6) blacklist regions. Example and hg38 files can be found here - http://renlab.sdsc.edu/rraviram/github_example_data
+For scATAC-seq data analyzed using Snaptools/SNAPATAC: In analysis folder, save 1) peak BED files, 2) .snap files, 3) bg_reads_50kbsh script, 4) mappability file, 5) genome file and 6) blacklist regions. Example and hg38 files can be found here - http://renlab.sdsc.edu/rraviram/github_example_data
 ```
 library(BSgenome.Hsapiens.UCSC.hg38)
 gbm1_atac_s3=readRDS("GBM1_IDHMT_section3.rds")
