@@ -1,4 +1,5 @@
 Package: AAmpD
+Version: 1.0.0
 Title: Identification of focal amplifications using single cell ATAC-seq data
 Authors@R: person("Ramya", "Raviram", email="ravirr01@nyumc.org", role = c("aut", "cre"))
 Description: Identification of focal amplifications using single cell ATAC-seq data
