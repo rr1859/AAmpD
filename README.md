@@ -17,17 +17,17 @@ library(AAmpD)
 
 ## Clustering and peak calling (single cell ATAC-seq data)
 
-1. Clustering of sc-ATAC-seq data can be performed using [SnapATAC](https://github.com/r3fang/SnapATAC) (used here) or other pipelines. Example data for one GBM sample (GBM1_Layer3) and non-tumor brain data (astrocyte and oligodendrocyte progenitor cells only) can be downloaded from here -  http://renlab.sdsc.edu/rraviram/github_example_data
+Step1. Clustering of sc-ATAC-seq data can be performed using [SnapATAC](https://github.com/r3fang/SnapATAC) (used here) or other pipelines. Example data for one GBM sample (GBM1_Layer3) and non-tumor brain data (astrocyte and oligodendrocyte progenitor cells only) can be downloaded from here -  http://renlab.sdsc.edu/rraviram/github_example_data
  
 Below is an example of snATAC-seq clustering results from 5 section of a single tumor (GBM1- IDH1 mutant) and large scale CNV analysis to identify tumor clusters
 <img src="./images/GBM1.png" width="600" height="375" />
 
-2. Peaks were called for each cluster using MACS2 and merged. Example peak files provided GBM1 tumor sample (GBM1_peaks.bed) and non-tumor brain sample (Non_tumor_peaks.bed). Peaks merged from all clusters in each sample.
+Step2. Peaks were called for each cluster using MACS2 and merged. Example peak files provided GBM1 tumor sample (GBM1_peaks.bed) and non-tumor brain sample (Non_tumor_peaks.bed). Peaks merged from all clusters in each sample.
 
 
 ## Identifying focal amplifications for each cluster
-1. Required files: For scATAC-seq data analyzed using Snaptools/SnapATAC: In analysis folder, save 1) peak BED files, 2) .snap files, 3) bg_reads_50kbsh script, 4) mappability file, 5) genome file and 6) blacklist regions. File for hg38 genome can be downloaded from -  http://renlab.sdsc.edu/rraviram/github_example_data
-2. Obtaining beackground reads that do not overlap with peaks
+Step1. Required files: For scATAC-seq data analyzed using Snaptools/SnapATAC: In analysis folder, save 1) peak BED files, 2) .snap files, 3) bg_reads_50kbsh script, 4) mappability file, 5) genome file and 6) blacklist regions. File for hg38 genome can be downloaded from -  http://renlab.sdsc.edu/rraviram/github_example_data
+Step2. Obtaining beackground reads that do not overlap with peaks
 
 ```
 library(BSgenome.Hsapiens.UCSC.hg38)
