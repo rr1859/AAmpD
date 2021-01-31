@@ -10,9 +10,8 @@ library(AAmpD)
 ```
 ## Overview of analysis
 <br />
-<img src="./images/Overview_github.png" width="800" height="50" />
+><img src="./images/Overview_github.png" width="800" height="50" />
 
--
  
 ## Clustering and peak calling (single cell ATAC-seq data)
 <ul>
