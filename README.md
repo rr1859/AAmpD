@@ -10,8 +10,11 @@ library(AAmpD)
 ```
 ## Overview of analysis
 <br />
+
 <img src="./images/Overview_github.png" width="800" height="50" />
-<br /> 
+
+</n> 
+
 ## Clustering and peak calling (single cell ATAC-seq data)
 <ul>
 <li> 1. Clustering of sc-ATAC-seq data can be performed using [SnapATAC](https://github.com/r3fang/SnapATAC) (used here) or other pipelines. Example data for one GBM sample (GBM1_Layer3) and non-tumor brain data (astrocyte and oligodendrocyte progenitor cells only) can be downloaded from here -  http://renlab.sdsc.edu/rraviram/github_example_data i </li>
