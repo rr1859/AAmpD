@@ -13,7 +13,7 @@ library(AAmpD)
 
 <img src="./images/Overview_github.png" width="800" height="50" />
 
-</n> 
+
 
 ## Clustering and peak calling (single cell ATAC-seq data)
 <ul>
@@ -24,7 +24,6 @@ library(AAmpD)
 
 <li>2. Peaks were called for each cluster using MACS2 and merged. Example peak files provided GBM1 tumor sample (GBM1_peaks.bed) and non-tumor brain sample (Non_tumor_peaks.bed). Peaks merged from all clusters in each sample. </li>
 
----
 
 ## Identifying focal amplifications for each cluster
 1. Required files: For scATAC-seq data analyzed using Snaptools/SnapATAC: In analysis folder, save 1) peak BED files, 2) .snap files, 3) bg_reads_50kbsh script, 4) mappability file, 5) genome file and 6) blacklist regions. File for hg38 genome can be downloaded from -  http://renlab.sdsc.edu/rraviram/github_example_data
