@@ -1,6 +1,5 @@
 ## AAmpD (in development) 
-AAmpD is an R package developed to identify focal amplification detection from cluster aggregate of single cell/nuclei ATAC-seq data <br />
-Pre-print to be uploaded.
+AAmpD is an R package developed to identify focal amplification detection from cluster aggregate of single cell/nuclei ATAC-seq data. Pipeline was developed based on analysis of single nuclei ATAC-seq (snATAC-seq, sci-method) data from glioblastoma multiforme (GBMS) tumors. Manuscipt in preparation.  <br />
 
 ## Installation
 The required R packages to use AAmpD are SnapATAC, psych, DNAcopy, GenomicRanges, miscTools, RColorBrewer and ggplot2. Also requires bedtools, igvtools and samtools. To install AAmpD R package:
@@ -13,15 +12,18 @@ library(AAmpD)
 <br />
 <img src="./images/Overview_github.png" width="800" height="50" />
 
-## Clustering and peak calling (single cell ATAC-seq data)
-Clustering of sc/snATAC-seq data can be performed using [SnapATAC](https://github.com/r3fang/SnapATAC) (used for this publication) or other pipelines
-* Example script and R workspace provided in examples/
-* Peaks were called for each cluster and merged to get the peak list for each sample
+###Clustering and peak calling (single cell ATAC-seq data)
+1. Clustering of sc-ATAC-seq data can be performed using [SnapATAC](https://github.com/r3fang/SnapATAC) (used here) or other pipelines
+* Example data for one GBM sample (GBM1_Layer3) and non-tumor brain data (astrocyte and oligodendrocyte progenitor cells only) can be downloaded from here -  http://renlab.sdsc.edu/rraviram/github_example_data
  
-### Clustering results of GBM1 (5 sections) and large scale CNV analysis
-<img src="./images/GBM1.png" width="600" height="375" />
+#### Example of snATAC-seq clustering results from 5 section of a single tumor (GBM1- IDH1 mutant) and large scale CNV analysis to identify tumor clusters
+<img src="./images/GBM1.png" width="600" height="375" /
 
-For scATAC-seq data analyzed using Snaptools/SNAPATAC: In analysis folder, save 1) peak BED files, 2) .snap files, 3) bg_reads_50kbsh script, 4) mappability file, 5) genome file and 6) blacklist regions. Example and hg38 files can be found here - http://renlab.sdsc.edu/rraviram/github_example_data
+2. Peaks were called for each cluster using MACS2 and merged. Example peak files provided GBM1 tumor sample (GBM1_peaks.bed) and non-tumor brain sample (Non_tumor_peaks.bed). Peaks merged from all clusters in each sample. 
+
+### Identifying focal amplifications for each cluster
+1. Required files: For scATAC-seq data analyzed using Snaptools/SnapATAC: In analysis folder, save 1) peak BED files, 2) .snap files, 3) bg_reads_50kbsh script, 4) mappability file, 5) genome file and 6) blacklist regions. File for hg38 genome can be downloaded from -  http://renlab.sdsc.edu/rraviram/github_example_data
+2. Obtaining beackground reads that do not overlap with peaks
 ```
 library(BSgenome.Hsapiens.UCSC.hg38)
 gbm1_atac_s3=readRDS("GBM1_IDHMT_section3.rds")
@@ -51,7 +53,7 @@ getBackgroundReads(snap_obj = non_tumor_atac,
 
 
 ```
-Once background reads have been obtained, run the AAmpD function for selected clusters to obtain regions of focal amplifications in each cluster.
+3. Once background reads have been obtained, run the AAmpD function for selected clusters to obtain regions of focal amplifications in each cluster.
 ```
 tumor_clusters = 1:11
 amps_results=sapply(tumor_clusters, AAmpD(path_to_files = "AAmpD_bg_reads",
